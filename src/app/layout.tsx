@@ -86,6 +86,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      {/* TODO: Inject Google Analytics (gtag.js) using NEXT_PUBLIC_GA_ID so syllabus_download events from DownloadButton are received */}
       <body
         className={`${dmSans.variable} ${fraunces.variable} ${dmSans.className} bg-zinc-50 text-zinc-900 antialiased dark:bg-[#050508] dark:text-slate-300`}
       >

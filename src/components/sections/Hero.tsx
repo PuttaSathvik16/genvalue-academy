@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { DownloadButton } from "@/components/ui/DownloadButton";
+import { SITE } from "@/lib/constants";
 
 const containerVariants = {
   hidden: {},
@@ -114,6 +116,17 @@ export function Hero() {
           >
             View Syllabus
           </Link>
+        </motion.div>
+
+        <motion.div variants={itemVariants} className="mt-5 flex justify-center sm:mt-6">
+          <DownloadButton
+            href={SITE.syllabusPdfUrl}
+            filename={SITE.syllabusDownloadFilename}
+            label="or Download the Syllabus PDF →"
+            variant="ghost"
+            size="sm"
+            trackingLabel="Download GenValue Academy syllabus PDF"
+          />
         </motion.div>
 
         <motion.div variants={itemVariants} className="mt-10 w-full sm:mt-14">

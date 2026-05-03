@@ -1,5 +1,9 @@
+"use client";
+
 import { founders } from "@/data/founders";
+import { authorInitials } from "@/lib/blog";
 import Image from "next/image";
+import { useCallback, useState } from "react";
 import { FaCircleCheck, FaGithub, FaLinkedin } from "react-icons/fa6";
 
 const sathvikFounder = founders.find((f) => f.id === "sathvik-putta")!;
@@ -20,6 +24,9 @@ const SKILL_TAGS = [
 const CONTACT_EMAIL = "genvalue.academy@gmail.com" as const;
 
 export function InstructorProfile() {
+  const [photoFailed, setPhotoFailed] = useState(false);
+  const onPhotoError = useCallback(() => setPhotoFailed(true), []);
+
   return (
     <section
       className="rounded-3xl border border-zinc-200 bg-gradient-to-br from-white via-zinc-50 to-zinc-100 p-6 shadow-lg ring-1 ring-zinc-200 sm:p-8 md:p-10 dark:border-white/10 dark:from-[#0D1B2A] dark:via-[#0a1520] dark:to-[#050508] dark:shadow-[0_25px_80px_-20px_rgba(0,0,0,0.65)] dark:ring-white/5"
@@ -29,15 +36,25 @@ export function InstructorProfile() {
         <div className="flex shrink-0 flex-col items-center lg:items-start">
           <div className="relative">
             <div className="relative h-36 w-36 overflow-hidden rounded-full shadow-inner ring-2 ring-[#FBBF24]/50 ring-offset-4 ring-offset-white sm:h-40 sm:w-40 dark:ring-offset-[#0D1B2A]">
-              <Image
-                src={sathvikFounder.photo}
-                alt="Sathvik Putta — Lead Instructor"
-                width={160}
-                height={160}
-                className="h-full w-full object-cover"
-                sizes="160px"
-                priority
-              />
+              {photoFailed ? (
+                <div
+                  className="flex h-full w-full items-center justify-center rounded-full bg-[#0D1B2A] text-xl font-bold tracking-tight text-[#FBBF24]"
+                  aria-hidden
+                >
+                  {authorInitials(sathvikFounder.name)}
+                </div>
+              ) : (
+                <Image
+                  src={sathvikFounder.photo}
+                  alt="Sathvik Putta — Lead Instructor"
+                  width={160}
+                  height={160}
+                  className="h-full w-full object-cover"
+                  sizes="160px"
+                  priority
+                  onError={onPhotoError}
+                />
+              )}
             </div>
             <span className="absolute -bottom-1 -right-1 flex items-center gap-1 rounded-full border border-[#10B981]/40 bg-[#10B981]/15 px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-wider text-[#34D399] shadow-lg backdrop-blur-sm">
               <FaCircleCheck className="h-3.5 w-3.5" aria-hidden />

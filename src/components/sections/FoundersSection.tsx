@@ -184,9 +184,15 @@ function FounderCard({ founder, index }: { founder: Founder; index: number }) {
   );
 }
 
-export function FoundersSection() {
+type FoundersSectionProps = {
+  /** Anchor for deep links (e.g. `/about#founders`). */
+  id?: string;
+};
+
+export function FoundersSection({ id }: FoundersSectionProps = {}) {
   return (
     <section
+      id={id}
       className="border-t border-zinc-200 bg-zinc-50 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 dark:border-white/10 dark:bg-[#050508]"
       aria-labelledby="founders-heading"
     >

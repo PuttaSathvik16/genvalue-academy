@@ -19,6 +19,8 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { DownloadButton } from "@/components/ui/DownloadButton";
+import { SITE } from "@/lib/constants";
 
 const OBJECTIVE_ICONS = [
   FaSliders,
@@ -124,6 +126,23 @@ export default function SyllabusPage() {
               </span>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* PDF download */}
+      <section className="border-b border-zinc-200 bg-zinc-50 px-4 py-10 sm:px-6 lg:px-8 dark:border-white/10 dark:bg-[#08080c]">
+        <div className="mx-auto flex max-w-7xl flex-col items-center text-center">
+          <DownloadButton
+            href={SITE.syllabusPdfUrl}
+            filename={SITE.syllabusDownloadFilename}
+            label="Download Full Syllabus PDF"
+            variant="gold"
+            size="lg"
+            trackingLabel="Download full GenValue Academy syllabus PDF"
+          />
+          <p className="mt-4 max-w-md text-sm text-zinc-600 dark:text-slate-400">
+            Free download · 9 pages · PDF format
+          </p>
         </div>
       </section>
 
@@ -413,6 +432,20 @@ export default function SyllabusPage() {
               {capstoneWeek?.assignment}
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* PDF download (footer) */}
+      <section className="border-t border-zinc-200 bg-zinc-50/80 px-4 py-12 sm:px-6 sm:py-14 lg:px-8 dark:border-white/10 dark:bg-black/20">
+        <div className="mx-auto flex max-w-7xl flex-col items-center text-center">
+          <DownloadButton
+            href={SITE.syllabusPdfUrl}
+            filename={SITE.syllabusDownloadFilename}
+            label="Download Syllabus PDF"
+            variant="outline"
+            size="md"
+            trackingLabel="Download GenValue Academy syllabus PDF"
+          />
         </div>
       </section>
 

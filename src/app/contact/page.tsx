@@ -1,4 +1,5 @@
 import { ContactForm } from "@/components/contact/ContactForm";
+import { DownloadButton } from "@/components/ui/DownloadButton";
 import { SITE } from "@/lib/constants";
 import { FaLinkedin, FaLocationDot, FaXTwitter } from "react-icons/fa6";
 
@@ -100,6 +101,29 @@ export default function ContactPage() {
           {/* Right — form */}
           <ContactForm />
         </div>
+
+        <section
+          className="mx-auto mt-16 max-w-2xl rounded-3xl border border-zinc-200 bg-white p-8 text-center shadow-lg ring-1 ring-zinc-200/80 sm:p-10 dark:border-white/10 dark:bg-[#0D1B2A] dark:ring-white/5"
+          aria-labelledby="contact-syllabus-card-heading"
+        >
+          <h2
+            id="contact-syllabus-card-heading"
+            className="text-xl font-bold text-zinc-900 sm:text-2xl dark:text-white"
+          >
+            Not ready to enroll yet?
+          </h2>
+          <p className="mt-3 text-zinc-600 dark:text-slate-400">Download the full course syllabus first.</p>
+          <div className="mt-8 flex justify-center">
+            <DownloadButton
+              href={SITE.syllabusPdfUrl}
+              filename={SITE.syllabusDownloadFilename}
+              label="Download Syllabus PDF"
+              variant="gold"
+              size="md"
+              trackingLabel="Download GenValue Academy syllabus PDF from contact page"
+            />
+          </div>
+        </section>
       </div>
     </div>
   );

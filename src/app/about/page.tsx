@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { FoundersSection } from "@/components/sections/FoundersSection";
 import { course } from "@/data/course";
 import { motion } from "framer-motion";
@@ -150,16 +151,39 @@ export default function AboutPage() {
     <div className="bg-zinc-50 text-zinc-700 dark:bg-[#050508] dark:text-slate-300">
       {/* Hero */}
       <section className="border-b border-zinc-200 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 dark:border-white/10">
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#F59E0B]">
-            {course.instructor.academy}
-          </p>
-          <h1 className="mt-4 text-balance text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl md:text-6xl dark:text-white">
-            About GenValue Academy
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg text-zinc-600 sm:text-xl dark:text-slate-400">
-            {course.subtitle}
-          </p>
+        <div className="mx-auto max-w-7xl">
+          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-16">
+            <div className="text-center lg:text-left">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#F59E0B]">
+                {course.instructor.academy}
+              </p>
+              <h1 className="mt-4 text-balance text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl md:text-6xl dark:text-white">
+                About GenValue Academy
+              </h1>
+              <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg text-zinc-600 sm:text-xl lg:mx-0 dark:text-slate-400">
+                {course.subtitle}
+              </p>
+            </div>
+            <div className="relative hidden justify-end lg:flex">
+              <motion.div
+                className="pointer-events-none w-full max-w-sm -rotate-2 opacity-95 xl:max-w-md"
+                aria-hidden
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <div className="overflow-hidden rounded-2xl shadow-[0_20px_50px_-12px_rgba(245,158,11,0.35)] ring-1 ring-[#FBBF24]/30 dark:opacity-90 dark:shadow-[0_24px_60px_-12px_rgba(245,158,11,0.25)]">
+                  <Image
+                    src="/images/poster/genvalue-poster.png"
+                    alt="GenValue Academy AI Tools Mastery Program Poster"
+                    width={480}
+                    height={675}
+                    className="h-auto w-full object-cover"
+                    sizes="(max-width: 1280px) 400px, 480px"
+                  />
+                </div>
+              </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -184,6 +208,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <FoundersSection id="founders" />
 
       {/* Names */}
       <section className="border-t border-zinc-200 bg-zinc-100/80 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 dark:border-white/10 dark:bg-[#0D1B2A]/50" aria-labelledby="about-names">
@@ -213,8 +239,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      <FoundersSection />
 
       {/* Approach */}
       <section className="border-t border-zinc-200 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 dark:border-white/10" aria-labelledby="about-approach">

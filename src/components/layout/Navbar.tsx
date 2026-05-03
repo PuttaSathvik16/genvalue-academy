@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useId, useState } from "react";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
+import { DownloadButton } from "@/components/ui/DownloadButton";
+import { SITE } from "@/lib/constants";
 
 export type NavItem = {
   readonly label: string;
@@ -15,6 +17,7 @@ const NAV_ITEMS: readonly NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Courses", href: "/courses" },
   { label: "About", href: "/about" },
+  { label: "Team", href: "/team" },
   { label: "Instructors", href: "/instructors" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
@@ -148,6 +151,23 @@ export function Navbar() {
           >
             Enroll Now
           </Link>
+          <span className="group relative hidden lg:inline-flex" title="Download Syllabus">
+            <DownloadButton
+              href={SITE.syllabusPdfUrl}
+              filename={SITE.syllabusDownloadFilename}
+              label="Download Syllabus"
+              variant="ghost"
+              size="sm"
+              iconOnly
+              trackingLabel="Download Syllabus"
+            />
+            <span
+              className="pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-zinc-900 px-2 py-1 text-xs font-medium text-white opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100 group-focus-within:opacity-100 dark:bg-white dark:text-zinc-900"
+              role="tooltip"
+            >
+              Download Syllabus
+            </span>
+          </span>
 
           <button
             type="button"

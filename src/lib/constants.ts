@@ -14,6 +14,10 @@ export const SITE = {
     youtube: "#",
     instagram: "#",
   },
+  /** Public URL for syllabus PDF (file in /public/downloads/). */
+  syllabusPdfUrl: "/downloads/GenValue_Academy_Syllabus.pdf",
+  /** Suggested filename when the user saves the syllabus PDF. */
+  syllabusDownloadFilename: "GenValue_Academy_AI_Tools_Mastery_Syllabus.pdf",
   course: {
     title: "AI Tools Mastery",
     subtitle: "for Real-World & Professional Applications",

@@ -8,14 +8,22 @@ import { SITE } from "@/lib/constants";
 export type QuickLinkItem = {
   readonly label: string;
   readonly href: string;
+  readonly downloadFilename?: string;
 };
 
 const QUICK_LINKS: readonly QuickLinkItem[] = [
   { label: "Home", href: "/" },
   { label: "Courses", href: "/courses" },
   { label: "Syllabus", href: "/syllabus" },
+  {
+    label: "Download Syllabus",
+    href: SITE.syllabusPdfUrl,
+    downloadFilename: SITE.syllabusDownloadFilename,
+  },
   { label: "About", href: "/about" },
+  { label: "Team", href: "/team" },
   { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/contact" },
 ] as const;
 
 type SocialNetwork = "linkedin" | "x" | "youtube" | "instagram";
@@ -113,13 +121,23 @@ export function Footer() {
             </h2>
             <ul className="mt-4 flex flex-col gap-2.5">
               {QUICK_LINKS.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className={`text-sm text-zinc-700 dark:text-slate-300 ${linkHoverClass}`}
-                  >
-                    {item.label}
-                  </Link>
+                <li key={`${item.label}-${item.href}`}>
+                  {item.downloadFilename ? (
+                    <a
+                      href={item.href}
+                      download={item.downloadFilename}
+                      className={`text-sm text-zinc-700 dark:text-slate-300 ${linkHoverClass}`}
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className={`text-sm text-zinc-700 dark:text-slate-300 ${linkHoverClass}`}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

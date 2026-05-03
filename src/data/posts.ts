@@ -1,74 +1,91 @@
-export type BlogPost = {
-  readonly slug: string;
-  readonly title: string;
-  readonly excerpt: string;
-  readonly date: string;
-  readonly author: string;
-  readonly category: string;
-  readonly readTime: string;
-  readonly coverImage: string;
-  /** Paragraphs for the article body */
-  readonly content: readonly string[];
-};
+export interface Post {
+  slug: string;
+  title: string;
+  excerpt: string;
+  content?: string;
+  date: string;
+  author: string;
+  authorRole: string;
+  category: string;
+  tags: string[];
+  coverImage: string;
+  readTime: string;
+  featured: boolean;
+}
 
-export const POSTS: readonly BlogPost[] = [
+const PLACEHOLDER_BODY =
+  "Full article coming soon. We're drafting the detailed sections, examples, and screenshots — check back shortly.\n\nThis placeholder lets you wire up routing, SEO, and layout before the final copy lands.";
+
+export const posts: Post[] = [
   {
     slug: "5-ai-tools-every-marketer-needs-2026",
     title: "The 5 AI Tools Every Marketer Needs in 2026",
     excerpt:
-      "From research and copy drafts to creative assets and analytics — here are the tools we reach for first when campaigns need to ship fast without sacrificing quality.",
-    date: "2026-01-18",
+      "Stop guessing which AI tool to use for marketing. Here are the 5 that actually move the needle — and exactly when to use each one.",
+    content: PLACEHOLDER_BODY,
+    date: "2026-04-15",
     author: "Sathvik Putta",
+    authorRole: "Founder, GenValue Academy",
     category: "Marketing",
+    tags: ["AI Tools", "Marketing", "Jasper", "Surfer SEO", "ChatGPT"],
+    coverImage: "/images/posts/marketer-tools.jpg",
+    readTime: "6 min read",
+    featured: true,
+  },
+  {
+    slug: "chatgpt-vs-claude-vs-gemini-2026",
+    title: "ChatGPT vs Claude vs Gemini in 2026 — Which Should You Use?",
+    excerpt:
+      "All three are powerful. None of them is best for everything. Here is the honest, practical breakdown of when to use each.",
+    content: PLACEHOLDER_BODY,
+    date: "2026-04-22",
+    author: "Sathvik Putta",
+    authorRole: "Founder, GenValue Academy",
+    category: "General AI",
+    tags: ["ChatGPT", "Claude", "Gemini", "Comparison"],
+    coverImage: "/images/posts/chatgpt-vs-claude.jpg",
     readTime: "8 min read",
-    coverImage: "/blog/covers/marketing-2026.svg",
-    content: [
-      "Marketing teams in 2026 are judged less on how many tools they try and more on how consistently they deliver outcomes. The right AI stack shortens feedback loops: you draft, test, refine, and publish without losing the thread between strategy and execution.",
-      "This guide assumes you already know your channels and personas. We focus on five categories — research synthesis, copy assistance, visual iteration, workflow automation, and measurement — and name specific tools that pair well with GenValue Academy’s judgment-first approach.",
-      "Tool selection always depends on brand voice, compliance, and stack constraints. Use this list as a starting map, then narrow based on your procurement rules and what your team will actually adopt Monday morning.",
-      "Expect follow-up posts that dive deeper into prompts, approval workflows, and how to document AI-assisted work for stakeholders who still ask, “Did a human sign off on this?”",
-    ],
+    featured: true,
   },
   {
-    slug: "choose-chatgpt-claude-gemini",
-    title: "How to Choose Between ChatGPT, Claude, and Gemini",
+    slug: "build-ai-workflow-zapier-make",
+    title: "How to Build Your First AI Workflow with Zapier and Make",
     excerpt:
-      "General-purpose assistants look interchangeable until you stress-test them on your real tasks. Here’s a practical framework for picking the right model for writing, coding, research, and multimodal work.",
-    date: "2026-01-08",
-    author: "Sathvik Putta",
-    category: "Strategy",
-    readTime: "12 min read",
-    coverImage: "/blog/covers/model-choice.svg",
-    content: [
-      "When someone asks which assistant is “best,” the honest answer is: best for what? Context window size, tone, instruction-following, and multimodal features all shift the answer — sometimes weekly as vendors ship updates.",
-      "Start by listing three recurring tasks you perform with an assistant: for example, long-form drafting, spreadsheet reasoning, and image critique. Score candidates against those tasks with the same prompts and rubric each time.",
-      "Budget and privacy matter as much as raw capability. Enterprise contracts, data retention policies, and regional hosting can disqualify an otherwise powerful option — decide those constraints before you fall in love with a demo.",
-      "We teach this comparison method directly in AI Tools Mastery so you’re not guessing when leadership asks why you standardized on one stack over another.",
-    ],
-  },
-  {
-    slug: "first-ai-workflow-zapier-make",
-    title: "Building Your First AI Workflow with Zapier and Make",
-    excerpt:
-      "Connect triggers, LLM steps, and human approvals without writing a full backend. A starter pattern you can clone for lead routing, content prep, and internal notifications.",
-    date: "2025-12-12",
-    author: "Sathvik Putta",
-    category: "Automation",
+      "Automation does not require code. This step-by-step guide shows you how to build a full AI-powered workflow using Zapier and Make in one afternoon.",
+    content: PLACEHOLDER_BODY,
+    date: "2026-04-29",
+    author: "Sujith Putta",
+    authorRole: "Co-Founder, GenValue Academy",
+    category: "AI Agents",
+    tags: ["Automation", "Zapier", "Make", "Workflows"],
+    coverImage: "/images/posts/ai-workflow.jpg",
     readTime: "10 min read",
-    coverImage: "/blog/covers/automation-workflow.svg",
-    content: [
-      "Automation platforms shine when they glue together systems your team already uses. Zapier and Make both support HTTP calls to language models, branching logic, and error handling — but their UX and pricing trade-offs differ.",
-      "Begin with a single high-volume pain point: e.g., qualifying inbound leads from a form. Map the happy path first — form submit, summarize with an LLM, post to Slack — then add retries and a human review branch.",
-      "Secrets and API keys belong in the platform vault, not in shared docs. Rotate keys when people leave the project, and log which version of a workflow ran for each record when auditing matters.",
-      "This article pairs with Week 7–9 themes in our syllabus: chaining tools responsibly and documenting what ran automatically versus what a human approved.",
-    ],
+    featured: false,
   },
 ];
 
-export function getPostBySlug(slug: string): BlogPost | undefined {
-  return POSTS.find((p) => p.slug === slug);
+/** @deprecated Prefer importing `posts` */
+export const POSTS = posts;
+
+export function getFeaturedPosts(): Post[] {
+  return posts.filter((p) => p.featured);
 }
 
-export function getRelatedPosts(slug: string, limit = 2): readonly BlogPost[] {
-  return POSTS.filter((p) => p.slug !== slug).slice(0, limit);
+export function getPostBySlug(slug: string): Post | undefined {
+  return posts.find((p) => p.slug === slug);
+}
+
+export function getRelatedPosts(slug: string, limit = 2): Post[] {
+  return posts.filter((p) => p.slug !== slug).slice(0, limit);
+}
+
+/** Splits optional markdown-style body into paragraphs for rendering. */
+export function getPostParagraphs(post: Post): string[] {
+  if (post.content?.trim()) {
+    return post.content
+      .split(/\n\n+/)
+      .map((p) => p.trim())
+      .filter(Boolean);
+  }
+  return [PLACEHOLDER_BODY.split("\n\n")[0] ?? "Coming soon."];
 }

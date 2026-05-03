@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FaArrowLeft } from "react-icons/fa6";
-import { getPostBySlug, getRelatedPosts, POSTS } from "@/data/posts";
+import { getPostBySlug, getPostParagraphs, getRelatedPosts, POSTS } from "@/data/posts";
 import { buildPageMetadata } from "@/lib/seo";
 
 type Props = Readonly<{ params: Promise<{ slug: string }> }>;
@@ -41,6 +41,7 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
   const related = getRelatedPosts(post.slug, 2);
+  const paragraphs = getPostParagraphs(post);
 
   return (
     <article className="bg-zinc-50 pb-20 text-zinc-700 dark:bg-[#050508] dark:text-slate-300">
@@ -76,7 +77,10 @@ export default async function BlogPostPage({ params }: Props) {
             {post.title}
           </h1>
           <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 border-b border-zinc-200 pb-8 text-sm text-zinc-600 dark:border-white/10 dark:text-slate-400">
-            <span className="font-medium text-zinc-800 dark:text-slate-200">{post.author}</span>
+            <span>
+              <span className="font-medium text-zinc-800 dark:text-slate-200">{post.author}</span>
+              <span className="text-zinc-500 dark:text-slate-500"> · {post.authorRole}</span>
+            </span>
             <span className="text-zinc-300 dark:text-slate-600" aria-hidden>
               ·
             </span>
@@ -89,7 +93,7 @@ export default async function BlogPostPage({ params }: Props) {
         </header>
 
         <div className="mt-10 space-y-6 text-base leading-relaxed text-zinc-700 dark:text-slate-300 sm:text-lg">
-          {post.content.map((paragraph, i) => (
+          {paragraphs.map((paragraph, i) => (
             <p key={`p-${i}`}>{paragraph}</p>
           ))}
         </div>
@@ -110,7 +114,7 @@ export default async function BlogPostPage({ params }: Props) {
                   <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100 dark:bg-white/5">
                     <Image
                       src={r.coverImage}
-                      alt=""
+                      alt={`Cover image: ${r.title}`}
                       fill
                       className="object-cover transition duration-300 group-hover:scale-[1.02]"
                       sizes="(max-width: 640px) 100vw, 50vw"

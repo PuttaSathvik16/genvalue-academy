@@ -15,7 +15,11 @@ type SiteLogoMarkProps = {
  */
 export function SiteLogoMark({ className = "h-10 w-10", priority = false }: SiteLogoMarkProps) {
   return (
-    <span className={`relative block shrink-0 ${className}`} aria-hidden>
+    <span
+      className={`relative block shrink-0 overflow-hidden ${className}`}
+      style={{ clipPath: "inset(0 7% 7% 0)" }}
+      aria-hidden
+    >
       {/* Dark mode: original image + screen blend removes black background, keeps white symbol. */}
       <Image
         src={SITE.logoMark}

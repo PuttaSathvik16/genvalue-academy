@@ -1,5 +1,7 @@
 export const SITE = {
   name: "GenValue Academy",
+  /** Nav + footer mark (`public/` path). */
+  logoMark: "/images/genvalue-logo.png",
   tagline: "Choosing the Right AI Tool for Every Task",
   description: "12-week practical program covering 40+ AI tools across 11 categories — for real-world professional results.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://genvalue.academy",

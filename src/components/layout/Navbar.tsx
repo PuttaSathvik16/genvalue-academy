@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useId, useState } from "react";
+import { SiteLogoMark } from "@/components/layout/SiteLogoMark";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { DownloadButton } from "@/components/ui/DownloadButton";
 import { SITE } from "@/lib/constants";
@@ -110,12 +111,7 @@ export function Navbar() {
           aria-label="GenValue Academy — Home"
           className="flex min-w-0 items-center gap-3 rounded-lg py-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563EB]"
         >
-          <span
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-zinc-100 text-base font-bold tracking-tight text-zinc-900 ring-1 ring-zinc-200 dark:bg-white/10 dark:text-white dark:ring-white/15"
-            aria-hidden
-          >
-            G
-          </span>
+          <SiteLogoMark priority />
           <span className="hidden font-semibold tracking-[0.12em] text-zinc-900 dark:text-white sm:inline sm:text-[0.8125rem] md:text-sm">
             GENVALUE ACADEMY
           </span>

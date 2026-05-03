@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { SiteLogoMark } from "@/components/layout/SiteLogoMark";
 import { useId, useState, type FormEvent } from "react";
 import { FaLinkedin, FaXTwitter, FaYoutube, FaInstagram } from "react-icons/fa6";
 import { SITE } from "@/lib/constants";
@@ -84,12 +85,7 @@ export function Footer() {
               href="/"
               className="flex w-fit items-center gap-3 rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#10B981]"
             >
-              <span
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-base font-bold text-zinc-900 shadow-sm ring-1 ring-zinc-200 dark:bg-white/10 dark:text-white dark:shadow-none dark:ring-white/15"
-                aria-hidden
-              >
-                G
-              </span>
+              <SiteLogoMark />
               <span className="text-sm font-semibold tracking-[0.12em] text-zinc-900 dark:text-white">
                 GENVALUE ACADEMY
               </span>

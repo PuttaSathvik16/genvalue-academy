@@ -1,7 +1,7 @@
 import { sendBrevoTransactionalEmail } from "@/lib/brevo";
 import { contactFormSchema } from "@/lib/contact-schema";
-import { escapeHtml } from "@/lib/html-escape";
 import { SITE } from "@/lib/constants";
+import { escapeHtml } from "@/lib/html-escape";
 import { NextResponse } from "next/server";
 
 function buildTeamEmailHtml(data: {
@@ -42,67 +42,105 @@ function buildConfirmationHtml(fullName: string): string {
 </html>`.trim();
 }
 
+function clientHint(): string {
+  return `You can also email us directly at ${SITE.email}.`;
+}
+
 export async function POST(request: Request) {
-  let body: unknown;
   try {
-    body = await request.json();
-  } catch {
-    return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
-  }
+    let body: unknown;
+    try {
+      body = await request.json();
+    } catch {
+      return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
+    }
 
-  const parsed = contactFormSchema.safeParse(body);
-  if (!parsed.success) {
+    const parsed = contactFormSchema.safeParse(body);
+    if (!parsed.success) {
+      return NextResponse.json(
+        { error: "Validation failed", issues: parsed.error.flatten() },
+        { status: 400 },
+      );
+    }
+
+    const data = parsed.data;
+    const teamInbox = process.env.BREVO_TEAM_EMAIL?.trim() || SITE.email;
+
+    const teamResult = await sendBrevoTransactionalEmail({
+      to: [{ email: teamInbox, name: "GenValue Academy" }],
+      subject: `Contact form: ${data.fullName}`,
+      htmlContent: buildTeamEmailHtml(data),
+      textContent: [
+        "New contact form — GenValue Academy",
+        `Name: ${data.fullName}`,
+        `Email: ${data.email}`,
+        `Phone: ${data.phone.trim() || "—"}`,
+        `Course interest: ${data.courseInterest}`,
+        "",
+        "Message:",
+        data.message,
+      ].join("\n"),
+    });
+
+    if (!teamResult.ok) {
+      const missingConfig =
+        teamResult.message.includes("is not set") ||
+        teamResult.message.includes("BREVO_API_KEY") ||
+        teamResult.message.includes("BREVO_SENDER_EMAIL");
+
+      console.error("[api/contact] Brevo team email failed:", teamResult);
+
+      if (missingConfig) {
+        return NextResponse.json(
+          {
+            error:
+              "This site’s email service isn’t configured yet (missing Brevo keys on the server). Ask the admin to add BREVO_API_KEY and BREVO_SENDER_EMAIL in Vercel.",
+            hint: clientHint(),
+            code: "EMAIL_NOT_CONFIGURED",
+          },
+          { status: 503 },
+        );
+      }
+
+      return NextResponse.json(
+        {
+          error:
+            "We couldn’t send your message through Brevo. Check that your sender email is verified in Brevo and the API key is valid.",
+          hint: clientHint(),
+          code: "BREVO_REJECTED",
+        },
+        { status: 502 },
+      );
+    }
+
+    const confirmResult = await sendBrevoTransactionalEmail({
+      to: [{ email: data.email, name: data.fullName }],
+      subject: "We received your message — GenValue Academy",
+      htmlContent: buildConfirmationHtml(data.fullName),
+      textContent: [
+        `Hi ${data.fullName.trim().split(/\s+/)[0] ?? "there"},`,
+        "",
+        "Thank you for contacting GenValue Academy. We've received your message and will get back to you within 24 hours.",
+        "",
+        "Best regards,",
+        "GenValue Team",
+      ].join("\n"),
+    });
+
+    if (!confirmResult.ok) {
+      console.error("[api/contact] Brevo confirmation email failed:", confirmResult);
+    }
+
+    return NextResponse.json({ ok: true });
+  } catch (err) {
+    console.error("[api/contact] unexpected error:", err);
     return NextResponse.json(
-      { error: "Validation failed", issues: parsed.error.flatten() },
-      { status: 400 },
+      {
+        error: "Something went wrong on the server.",
+        hint: clientHint(),
+        code: "INTERNAL_ERROR",
+      },
+      { status: 500 },
     );
   }
-
-  const data = parsed.data;
-  const teamInbox = process.env.BREVO_TEAM_EMAIL?.trim() || SITE.email;
-
-  const teamResult = await sendBrevoTransactionalEmail({
-    to: [{ email: teamInbox, name: "GenValue Academy" }],
-    subject: `Contact form: ${data.fullName}`,
-    htmlContent: buildTeamEmailHtml(data),
-    textContent: [
-      "New contact form — GenValue Academy",
-      `Name: ${data.fullName}`,
-      `Email: ${data.email}`,
-      `Phone: ${data.phone.trim() || "—"}`,
-      `Course interest: ${data.courseInterest}`,
-      "",
-      "Message:",
-      data.message,
-    ].join("\n"),
-  });
-
-  if (!teamResult.ok) {
-    console.error("[api/contact] Brevo team email failed:", teamResult);
-    return NextResponse.json(
-      { error: "Unable to send message right now. Please try again later." },
-      { status: 502 },
-    );
-  }
-
-  const confirmResult = await sendBrevoTransactionalEmail({
-    to: [{ email: data.email, name: data.fullName }],
-    subject: "We received your message — GenValue Academy",
-    htmlContent: buildConfirmationHtml(data.fullName),
-    textContent: [
-      `Hi ${data.fullName.trim().split(/\s+/)[0] ?? "there"},`,
-      "",
-      "Thank you for contacting GenValue Academy. We've received your message and will get back to you within 24 hours.",
-      "",
-      "Best regards,",
-      "GenValue Team",
-    ].join("\n"),
-  });
-
-  if (!confirmResult.ok) {
-    console.error("[api/contact] Brevo confirmation email failed:", confirmResult);
-    // Team already got the lead; still return success to the user.
-  }
-
-  return NextResponse.json({ ok: true });
 }

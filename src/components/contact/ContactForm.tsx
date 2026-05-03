@@ -33,6 +33,7 @@ function fieldErrorClass(hasError: boolean) {
 export function ContactForm() {
   const [toastOpen, setToastOpen] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [submitHint, setSubmitHint] = useState<string | null>(null);
 
   const {
     register,
@@ -52,14 +53,24 @@ export function ContactForm() {
 
   const onSubmit = async (data: ContactFormValues) => {
     setSubmitError(null);
+    setSubmitHint(null);
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
+      const payload = (await res.json().catch(() => ({}))) as {
+        error?: string;
+        hint?: string;
+      };
       if (!res.ok) {
-        setSubmitError("Something went wrong. Please try again.");
+        setSubmitError(
+          typeof payload.error === "string" && payload.error.length > 0
+            ? payload.error
+            : "Something went wrong. Please try again.",
+        );
+        setSubmitHint(typeof payload.hint === "string" ? payload.hint : null);
         return;
       }
       reset();
@@ -183,9 +194,15 @@ export function ContactForm() {
           </div>
 
           {submitError ? (
-            <p className="rounded-lg border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm text-red-300" role="alert">
-              {submitError}
-            </p>
+            <div
+              className="rounded-lg border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm text-red-200"
+              role="alert"
+            >
+              <p>{submitError}</p>
+              {submitHint ? (
+                <p className="mt-2 text-xs leading-relaxed text-red-200/90 dark:text-red-100/80">{submitHint}</p>
+              ) : null}
+            </div>
           ) : null}
 
           <button

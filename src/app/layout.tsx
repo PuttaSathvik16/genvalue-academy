@@ -45,6 +45,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: [{ url: "/gv-favicon.jpg", type: "image/jpeg", sizes: "1024x1024" }],
+    shortcut: [{ url: "/gv-favicon.jpg", type: "image/jpeg" }],
+    apple: [{ url: "/apple-touch-icon.jpg", type: "image/jpeg", sizes: "180x180" }],
+  },
   openGraph: {
     title: "GenValue Academy | AI Tools Mastery Program",
     description:

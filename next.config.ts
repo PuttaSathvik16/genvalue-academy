@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: appDir,
   },
+  /** Browsers probe `/favicon.ico` by habit; serve the GV mark from our JPEG asset. */
+  async redirects() {
+    return [{ source: "/favicon.ico", destination: "/gv-favicon.jpg", permanent: false }];
+  },
 };
 
 export default nextConfig;

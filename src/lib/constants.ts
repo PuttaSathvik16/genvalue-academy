@@ -34,7 +34,9 @@ export const SITE = {
 const ENROLL_MAIL_SUBJECT = "Interest in AI Tools Mastery — GenValue Academy" as const;
 const ENROLL_MAIL_BODY = `Hey,
 
-I'm interested in the AI Tools Mastery program. Please let me know the next steps.
+I'm interested in the AI Tools Mastery program and would like to move forward. Could you please share the next steps, including enrollment details, schedule, and any prerequisites?
+
+Looking forward to your response.
 
 Thank you.` as const;
 

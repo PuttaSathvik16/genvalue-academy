@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useState } from "react";
-import { enrollMailto } from "@/lib/constants";
+import { EnrollNowLink } from "@/components/ui/EnrollNowLink";
 import { FaLinkedin, FaLink, FaXTwitter } from "react-icons/fa6";
 
 type Props = {
@@ -32,12 +32,9 @@ export function BlogPostSidebar({ postUrl, title }: Props) {
         <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-slate-400">
           Join the 12-week AI Tools Mastery cohort — practical workflows, 40+ tools, real projects.
         </p>
-        <a
-          href={enrollMailto}
-          className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-[#F59E0B] px-5 py-3 text-sm font-semibold text-[#0D1B2A] shadow-md transition hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F59E0B]"
-        >
+        <EnrollNowLink className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-[#F59E0B] px-5 py-3 text-sm font-semibold text-[#0D1B2A] shadow-md transition hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F59E0B]">
           Enroll Now
-        </a>
+        </EnrollNowLink>
       </div>
 
       <div className="rounded-2xl border border-zinc-200 bg-white p-5 dark:border-white/10 dark:bg-[#0D1B2A]">

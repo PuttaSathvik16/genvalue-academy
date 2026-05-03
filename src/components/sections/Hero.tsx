@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { DownloadButton } from "@/components/ui/DownloadButton";
-import { enrollMailto, SITE } from "@/lib/constants";
+import { EnrollNowLink } from "@/components/ui/EnrollNowLink";
+import { SITE } from "@/lib/constants";
 
 const containerVariants = {
   hidden: {},
@@ -102,13 +103,12 @@ export function Hero() {
           variants={itemVariants}
           className="mt-8 flex w-full max-w-md flex-col gap-3 sm:mt-10 sm:max-w-none sm:flex-row sm:justify-center sm:gap-4"
         >
-          <a
-            href={enrollMailto}
+          <EnrollNowLink
             aria-label="Enroll in AI Tools Mastery program"
             className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#F59E0B] px-8 text-sm font-semibold text-[#0D1B2A] shadow-lg shadow-amber-500/20 transition hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F59E0B] sm:min-h-[3rem] sm:px-10 sm:text-base"
           >
             Enroll Now
-          </a>
+          </EnrollNowLink>
           <Link
             href="/syllabus"
             aria-label="View the 12-week course syllabus"

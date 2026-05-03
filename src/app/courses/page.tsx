@@ -28,6 +28,21 @@ export default function CoursesPage() {
           <strong className="font-semibold text-zinc-900 dark:text-white">AI Tools Mastery</strong> — a
           practical 12-week track built for professionals who need judgment, not just feature lists.
         </p>
+        <div className="mx-auto mt-10 w-full max-w-4xl overflow-hidden rounded-2xl border border-zinc-200 bg-black shadow-xl dark:border-white/10">
+          <video
+            className="h-auto w-full"
+            src="/videos/genvalue-academy-promo.mp4"
+            controls
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label="GenValue Academy promo video"
+          >
+            Your browser does not support the video tag.
+          </video>
+        </div>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
           <Link
             href="/syllabus"

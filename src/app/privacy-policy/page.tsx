@@ -27,6 +27,18 @@ export default function PrivacyPolicyPage() {
             the information you provide (such as name, email, phone, and message) to respond to inquiries and operate our
             services.
           </p>
+          <h2 className="text-xl font-semibold text-zinc-900 dark:text-white">Cookies, cache &amp; local storage</h2>
+          <p>
+            Like any website, your browser may keep <strong>temporary cache files</strong> (e.g. images, scripts) to load
+            pages faster. We do not use that cache to identify you — it is normal browser behavior, not a paid tracking
+            product.
+          </p>
+          <p>
+            We also store a <strong>single site preference</strong> in your browser (e.g. local storage) so the
+            &quot;Cookies &amp; privacy&quot; notice can stay dismissed after you accept or dismiss it. We are not
+            using a commercial cookie-consent or analytics platform; the notice is provided as a simple formality and
+            record of what we do today.
+          </p>
           <p>
             We use trusted providers (such as email delivery services) to send correspondence; those providers process
             data according to their terms and applicable law. We do not sell your personal information.

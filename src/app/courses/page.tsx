@@ -46,7 +46,7 @@ export default function CoursesPage() {
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
           <Link
             href="/syllabus"
-            className="inline-flex min-h-12 items-center justify-center rounded-full border-2 border-[#2563EB] bg-[#2563EB]/15 px-8 text-base font-semibold text-white transition hover:bg-[#2563EB]/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563EB]"
+            className="inline-flex min-h-12 items-center justify-center rounded-full border-2 border-[#2563EB] bg-[#2563EB]/10 px-8 text-base font-semibold text-[#1d4ed8] transition hover:bg-[#2563EB]/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563EB] dark:bg-[#2563EB]/15 dark:text-white dark:hover:bg-[#2563EB]/25"
           >
             View full syllabus
           </Link>

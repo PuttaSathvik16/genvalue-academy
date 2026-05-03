@@ -73,7 +73,8 @@ export function ContactForm() {
   return (
     <>
       <div
-        className="rounded-3xl border border-zinc-200 bg-gradient-to-br from-white to-zinc-100 p-6 shadow-xl ring-1 ring-zinc-200 sm:p-8 dark:border-white/10 dark:from-[#0D1B2A] dark:to-[#050508] dark:ring-white/5"
+        id="contact-form"
+        className="scroll-mt-24 rounded-3xl border border-zinc-200 bg-gradient-to-br from-white to-zinc-100 p-6 shadow-xl ring-1 ring-zinc-200 sm:p-8 dark:border-white/10 dark:from-[#0D1B2A] dark:to-[#050508] dark:ring-white/5"
         aria-labelledby="contact-form-heading"
       >
         <h2 id="contact-form-heading" className="text-xl font-bold text-zinc-900 sm:text-2xl dark:text-white">

@@ -7,7 +7,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return buildPageMetadata({
     path: "/team",
     title: "Our Team | GenValue Academy",
-    description: "Meet Sathvik Putta and Sujith Putta — the founders of GenValue Academy.",
+    description: "Meet Sathvik and Sujith — the founders of GenValue Academy.",
   });
 }
 
@@ -38,11 +38,10 @@ export default function TeamPage() {
           </h2>
           <div className="mt-6 space-y-4 text-base leading-relaxed text-zinc-600 sm:text-lg dark:text-slate-400">
             <p>
-              <strong className="font-semibold text-zinc-900 dark:text-white">GenValue</strong> is woven from three names that
+              <strong className="font-semibold text-zinc-900 dark:text-white">GenValue</strong> is woven from two names that
               shaped how we think about education —{" "}
-              <strong className="font-semibold text-zinc-800 dark:text-slate-200">Sathvik</strong>,{" "}
-              <strong className="font-semibold text-zinc-800 dark:text-slate-200">Sujith</strong>, and{" "}
-              <strong className="font-semibold text-zinc-800 dark:text-slate-200">Putta</strong>. They stand for curiosity
+              <strong className="font-semibold text-zinc-800 dark:text-slate-200">Sathvik</strong> and{" "}
+              <strong className="font-semibold text-zinc-800 dark:text-slate-200">Sujith</strong>. They stand for curiosity
               without hype, discipline without ego, and showing up for learners the way you&apos;d show up for family.
             </p>
             <p>

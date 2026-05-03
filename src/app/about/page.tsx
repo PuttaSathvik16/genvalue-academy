@@ -219,11 +219,10 @@ export default function AboutPage() {
           </h2>
           <div className="mt-8 space-y-5 text-base leading-relaxed text-zinc-600 sm:text-lg dark:text-slate-400">
             <p>
-              <strong className="font-semibold text-zinc-900 dark:text-white">GenValue</strong> carries three names that
+              <strong className="font-semibold text-zinc-900 dark:text-white">GenValue</strong> carries two names that
               shaped how we think about education:{" "}
-              <strong className="font-semibold text-zinc-800 dark:text-slate-200">Sathvik</strong>,{" "}
-              <strong className="font-semibold text-zinc-800 dark:text-slate-200">Sujith</strong>, and{" "}
-              <strong className="font-semibold text-zinc-800 dark:text-slate-200">Putta</strong>. Together they stand for
+              <strong className="font-semibold text-zinc-800 dark:text-slate-200">Sathvik</strong> and{" "}
+              <strong className="font-semibold text-zinc-800 dark:text-slate-200">Sujith</strong>. Together they stand for
               curiosity without hype, discipline without ego, and showing up for learners the way you&apos;d
               show up for family.
             </p>

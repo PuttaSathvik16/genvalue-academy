@@ -80,21 +80,39 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Maps placeholder */}
-            <div className="overflow-hidden rounded-3xl border border-dashed border-zinc-300 bg-gradient-to-br from-zinc-50 to-transparent p-6 shadow-inner dark:border-white/20 dark:from-white/[0.04] sm:p-8">
+            {/* Location map */}
+            <div className="overflow-hidden rounded-3xl border border-zinc-200 bg-gradient-to-br from-zinc-50 to-transparent p-6 shadow-inner dark:border-white/10 dark:from-white/[0.04] sm:p-8">
               <div className="flex items-start gap-3">
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#2563EB]/15 text-[#2563EB] dark:text-[#60A5FA]">
                   <FaLocationDot className="h-5 w-5" aria-hidden />
                 </span>
                 <div>
-                  <p className="font-semibold text-zinc-900 dark:text-white">Google Maps</p>
+                  <p className="font-semibold text-zinc-900 dark:text-white">Location</p>
                   <p className="mt-1 text-sm text-zinc-600 dark:text-slate-400">
-                    Embed a map here when you publish a public studio or office location.
+                    New Haven, Connecticut, USA
                   </p>
                 </div>
               </div>
-              <div className="mt-6 aspect-[16/10] w-full rounded-2xl bg-zinc-200 ring-1 ring-inset ring-zinc-300 dark:bg-black/40 dark:ring-white/10" />
-              <p className="mt-3 text-center text-xs text-zinc-500 dark:text-slate-600">Map embed placeholder</p>
+              <div className="mt-6 aspect-[16/10] w-full overflow-hidden rounded-2xl bg-zinc-200 ring-1 ring-inset ring-zinc-300 dark:bg-black/40 dark:ring-white/10">
+                <iframe
+                  title="Map showing New Haven, Connecticut, USA"
+                  className="h-full min-h-[240px] w-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                  src="https://www.google.com/maps?q=New+Haven%2C+Connecticut%2C+USA&hl=en&z=13&output=embed"
+                />
+              </div>
+              <p className="mt-3 text-center text-xs text-zinc-500 dark:text-slate-500">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=New+Haven%2C+CT%2C+USA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline decoration-zinc-400 underline-offset-2 transition hover:text-[#2563EB] hover:decoration-[#2563EB] dark:hover:text-[#60A5FA]"
+                >
+                  Open in Google Maps
+                </a>
+              </p>
             </div>
           </aside>
 

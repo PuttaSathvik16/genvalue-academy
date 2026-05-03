@@ -7,7 +7,7 @@ import { useCallback, useEffect, useId, useState } from "react";
 import { SiteLogoMark } from "@/components/layout/SiteLogoMark";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { DownloadButton } from "@/components/ui/DownloadButton";
-import { SITE } from "@/lib/constants";
+import { enrollMailto, SITE } from "@/lib/constants";
 
 export type NavItem = {
   readonly label: string;
@@ -140,13 +140,13 @@ export function Navbar() {
 
         <div className="flex items-center gap-2 sm:gap-3">
           <ThemeToggle />
-          <Link
-            href="/enroll"
+          <a
+            href={enrollMailto}
             aria-label="Enroll in AI Tools Mastery"
             className="hidden rounded-full bg-[#F59E0B] px-4 py-2.5 text-sm font-semibold text-[#0D1B2A] shadow-sm transition-transform hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F59E0B] sm:inline-flex sm:items-center sm:justify-center"
           >
             Enroll Now
-          </Link>
+          </a>
           <span className="group relative hidden lg:inline-flex" title="Download Syllabus">
             <DownloadButton
               href={SITE.syllabusPdfUrl}
@@ -236,14 +236,14 @@ export function Navbar() {
                   </Link>
                 );
               })}
-              <Link
-                href="/enroll"
-                onNavigate={closeMobileMenu}
+              <a
+                href={enrollMailto}
+                onClick={closeMobileMenu}
                 aria-label="Enroll in AI Tools Mastery program"
                 className="mt-2 inline-flex items-center justify-center rounded-full bg-[#F59E0B] px-4 py-3 text-sm font-semibold text-[#0D1B2A] shadow-sm transition hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F59E0B]"
               >
                 Enroll Now
-              </Link>
+              </a>
             </motion.nav>
           </motion.div>
         ) : null}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { enrollMailto } from "@/lib/constants";
 
 type ParticleConfig = {
   readonly leftPct: number;
@@ -70,12 +71,12 @@ export function EnrollCTA() {
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-8">
-          <Link
-            href="/enroll"
+          <a
+            href={enrollMailto}
             className="inline-flex min-h-12 min-w-[200px] items-center justify-center rounded-full bg-[#F59E0B] px-10 text-base font-semibold text-[#0D1B2A] shadow-lg shadow-amber-500/25 transition hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F59E0B]"
           >
             Enroll Now
-          </Link>
+          </a>
           <Link
             href="/contact"
             className="text-base font-medium text-zinc-800 underline decoration-zinc-400 decoration-2 underline-offset-4 transition hover:text-zinc-950 hover:decoration-zinc-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-900 dark:text-slate-200 dark:decoration-slate-500 dark:hover:text-white dark:hover:decoration-white dark:focus-visible:outline-white"

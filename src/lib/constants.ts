@@ -30,3 +30,15 @@ export const SITE = {
     categories: "11",
   },
 } as const;
+
+const ENROLL_MAIL_SUBJECT = "Interest in AI Tools Mastery — GenValue Academy" as const;
+const ENROLL_MAIL_BODY = `Hey,
+
+I'm interested in the AI Tools Mastery program. Please let me know the next steps.
+
+Thank you.` as const;
+
+/** mailto: link for all "Enroll" CTAs (opens the user's email client). */
+export const enrollMailto = `mailto:${
+  SITE.email
+}?subject=${encodeURIComponent(ENROLL_MAIL_SUBJECT)}&body=${encodeURIComponent(ENROLL_MAIL_BODY)}` as const;

@@ -28,7 +28,7 @@ export function SyllabusCourseJsonLd() {
     offers: {
       "@type": "Offer",
       availability: "https://schema.org/InStock",
-      url: `${SITE_URL}/enroll`,
+      url: `${SITE_URL}/contact`,
       description: course.price,
     },
     courseWorkload: course.duration,

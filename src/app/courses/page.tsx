@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { enrollMailto } from "@/lib/constants";
 import { buildPageMetadata } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -34,12 +35,12 @@ export default function CoursesPage() {
           >
             View full syllabus
           </Link>
-          <Link
-            href="/enroll"
+          <a
+            href={enrollMailto}
             className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#F59E0B] px-8 text-base font-semibold text-[#0D1B2A] shadow-lg shadow-amber-500/20 transition hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F59E0B]"
           >
             Enroll now
-          </Link>
+          </a>
         </div>
       </div>
     </div>

@@ -17,10 +17,9 @@ import {
   FaSliders,
 } from "react-icons/fa6";
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { DownloadButton } from "@/components/ui/DownloadButton";
-import { SITE } from "@/lib/constants";
+import { enrollMailto, SITE } from "@/lib/constants";
 
 const OBJECTIVE_ICONS = [
   FaSliders,
@@ -460,13 +459,13 @@ export default function SyllabusPage() {
         transition={{ duration: 0.28, ease: accordionEase }}
         style={{ pointerEvents: showStickyEnroll ? "auto" : "none" }}
       >
-        <Link
-          href="/enroll"
+        <a
+          href={enrollMailto}
           aria-label="Enroll in AI Tools Mastery program"
           className="pointer-events-auto inline-flex min-h-12 items-center justify-center rounded-full bg-[#F59E0B] px-8 text-sm font-semibold text-[#0D1B2A] shadow-lg shadow-amber-500/30 transition hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F59E0B] sm:min-h-[3rem] sm:px-10 sm:text-base"
         >
           Enroll Now
-        </Link>
+        </a>
       </motion.div>
     </div>
   );

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { SITE } from "@/lib/constants";
 
 type SiteLogoMarkProps = {
@@ -15,18 +14,21 @@ type SiteLogoMarkProps = {
  */
 export function SiteLogoMark({ className = "h-10 w-10", priority = false }: SiteLogoMarkProps) {
   return (
-    <span
-      className={`relative block shrink-0 overflow-hidden ${className}`}
-      aria-hidden
-    >
-      <Image
-        src={SITE.logoMark}
-        alt=""
-        width={256}
-        height={256}
-        className="h-full w-full object-contain p-0.5 invert dark:invert-0"
-        sizes="40px"
-        priority={priority}
+    <span className={`relative block shrink-0 ${className}`} aria-hidden>
+      <span
+        className="block h-full w-full bg-zinc-950 dark:bg-white"
+        style={{
+          // Remove tiny bottom-right artifact present in the source raster.
+          clipPath: "inset(0 7% 7% 0)",
+          WebkitMaskImage: `url(${SITE.logoMark})`,
+          maskImage: `url(${SITE.logoMark})`,
+          WebkitMaskRepeat: "no-repeat",
+          maskRepeat: "no-repeat",
+          WebkitMaskPosition: "center",
+          maskPosition: "center",
+          WebkitMaskSize: "contain",
+          maskSize: "contain",
+        }}
       />
     </span>
   );

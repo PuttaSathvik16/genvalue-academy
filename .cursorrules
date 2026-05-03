@@ -1,0 +1,30 @@
+You are building the GenValue Academy website.
+
+## Stack
+- Next.js 15 (App Router), TypeScript, Tailwind CSS v4, Framer Motion
+- Tailwind v4 uses @theme in globals.css — NO tailwind.config.ts file exists
+- Brand colors are defined as CSS variables in globals.css
+
+## Brand Colors
+- Primary/Navy: #0D1B2A
+- Accent Blue: #2563EB
+- Emerald: #10B981
+- Gold: #F59E0B
+- Background: #04050A
+
+## Rules
+- Always use TypeScript. Never use `any` — use proper interfaces from src/data/course.ts
+- Always use functional components with named exports
+- Always add aria-labels to interactive elements
+- Always handle loading and error states
+- Always add dark mode variants for custom colors
+- Use Framer Motion for all animations — respect prefers-reduced-motion
+- Use next/image for all images with proper width, height, and alt
+- Import site constants from src/lib/constants.ts
+- Import course data from src/data/course.ts
+
+## Brand
+- Academy: GenValue Academy
+- Instructor: Sathvik Putta
+- Contact: genvalue.academy@gmail.com
+- Tagline: "Choosing the Right AI Tool for Every Task"

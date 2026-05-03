@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@keyframes tools-marquee-ltr {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes tools-marquee-rtl {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes enroll-particle {
+  0%,
+  100% {
+    opacity: 0.12;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: translate3d(var(--enroll-tx, 0px), var(--enroll-ty, 0px), 0) scale(1.25);
+  }
+}
+
+@theme inline {
+  --color-primary: #0D1B2A;
+  --color-accent: #2563EB;
+  --color-emerald: #10B981;
+  --color-gold: #f59e0b;
+  --color-gold-text: #fbbf24;
+  --color-background: #04050A;
+  --color-foreground: #e2e8f0;
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --animate-tools-marquee-ltr: tools-marquee-ltr 55s linear infinite;
+  --animate-tools-marquee-rtl: tools-marquee-rtl 55s linear infinite;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display), Georgia, "Times New Roman", serif;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-tools-marquee-ltr,
+  .animate-tools-marquee-rtl {
+    animation: none !important;
+  }
+
+  .enroll-particle-dot {
+    animation: none !important;
+  }
+}
+

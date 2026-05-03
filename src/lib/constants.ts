@@ -1,0 +1,26 @@
+export const SITE = {
+  name: "GenValue Academy",
+  tagline: "Choosing the Right AI Tool for Every Task",
+  description: "12-week practical program covering 40+ AI tools across 11 categories — for real-world professional results.",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://genvalue.academy",
+  email: "genvalue.academy@gmail.com",
+  instructor: {
+    name: "Sathvik Putta",
+    title: "Lead Instructor, GenValue Academy",
+  },
+  socials: {
+    linkedin: "https://www.linkedin.com/in/genvalue-academy/",
+    twitter: "#",
+    youtube: "#",
+    instagram: "#",
+  },
+  course: {
+    title: "AI Tools Mastery",
+    subtitle: "for Real-World & Professional Applications",
+    duration: "12 Weeks",
+    level: "Beginner to Early Professional",
+    format: "Practical · Case-Based · Project-Driven",
+    tools: "40+",
+    categories: "11",
+  },
+} as const;

@@ -11,7 +11,7 @@ export const SITE = {
     title: "Lead Instructor, GenValue Academy",
   },
   socials: {
-    linkedin: "https://www.linkedin.com/in/genvalue-academy/",
+    linkedin: "https://www.linkedin.com/company/genvalueacademy/",
     twitter: "#",
     youtube: "#",
     instagram: "#",

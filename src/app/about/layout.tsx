@@ -6,7 +6,7 @@ export async function generateMetadata(): Promise<Metadata> {
     path: "/about",
     title: "About Us | GenValue Academy",
     description:
-      "GenValue Academy teaches judgment for AI tools — mission, story, approach, and values behind our 12-week AI Tools Mastery program.",
+      "GenValue Academy teaches judgment for AI tools - mission, story, approach, and values behind our 12-week AI Tools Mastery program.",
     ogTitle: "About Us | GenValue Academy",
   });
 }

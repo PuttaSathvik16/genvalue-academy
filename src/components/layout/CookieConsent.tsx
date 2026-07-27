@@ -62,7 +62,7 @@ export function CookieConsent() {
             Cookies & privacy
           </h2>
           <p id="cookie-consent-desc" className="mt-1 text-sm leading-relaxed text-zinc-600 dark:text-slate-400">
-            This site uses basic browser storage only — including temporary cache files your browser creates while you
+            This site uses basic browser storage only - including temporary cache files your browser creates while you
             browse, and a small local preference so this notice stays dismissed. We do not run paid marketing or
             analytics consent platforms; this banner is for transparency.{" "}
             <Link

@@ -9,9 +9,9 @@ import { FaCircleCheck, FaGithub, FaLinkedin } from "react-icons/fa6";
 const sathvikFounder = founders.find((f) => f.id === "sathvik-putta")!;
 
 const BIO_PARAGRAPHS = [
-  "Sathvik builds and ships with AI tools daily — from research and writing to automation and lightweight product work. That practitioner lens shapes every lesson: what actually works when deadlines hit, not what sounds clever in a demo.",
+  "Sathvik builds and ships with AI tools daily - from research and writing to automation and lightweight product work. That practitioner lens shapes every lesson: what actually works when deadlines hit, not what sounds clever in a demo.",
   "Expect grounded workflows you can reuse Monday morning: how to pick tools fast, structure prompts, chain steps responsibly, and document outputs colleagues can trust.",
-  "Teaching philosophy is simple — fewer buzzwords, more judgment. You leave knowing when to reach for a general assistant vs a specialized stack, and how to defend your choices with clarity.",
+  "Teaching philosophy is simple - fewer buzzwords, more judgment. You leave knowing when to reach for a general assistant vs a specialized stack, and how to defend your choices with clarity.",
 ] as const;
 
 const SKILL_TAGS = [
@@ -46,7 +46,7 @@ export function InstructorProfile() {
               ) : (
                 <Image
                   src={sathvikFounder.photo}
-                  alt="Sathvik Putta — Lead Instructor"
+                  alt="Sathvik Putta - Lead Instructor"
                   width={160}
                   height={160}
                   className="h-full w-full object-cover"

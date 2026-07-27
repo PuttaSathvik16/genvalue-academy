@@ -16,13 +16,13 @@ const PLACEHOLDER_TESTIMONIALS: readonly TestimonialItem[] = [
   },
   {
     quote:
-      "Capstone aside, the weekly builds forced me to ship real outputs—not slides. My portfolio finally matches what I claim on LinkedIn.",
+      "Capstone aside, the weekly builds forced me to ship real outputs-not slides. My portfolio finally matches what I claim on LinkedIn.",
     studentName: "Priya Malhotra",
     role: "Marketing Lead",
   },
   {
     quote:
-      "Clear judgment beats chasing every new launch. This program teaches exactly that—fast picks, clean documentation, confident delivery.",
+      "Clear judgment beats chasing every new launch. This program teaches exactly that-fast picks, clean documentation, confident delivery.",
     studentName: "Marcus Chen",
     role: "Operations Consultant",
   },

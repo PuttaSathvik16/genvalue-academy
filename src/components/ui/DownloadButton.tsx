@@ -52,7 +52,7 @@ function trackDownload(filename: string): void {
   try {
     window.gtag?.("event", "syllabus_download", { page_location: window.location.href });
   } catch {
-    /* ignore — tracking must never block */
+    /* ignore - tracking must never block */
   }
 
   try {
@@ -65,7 +65,7 @@ function trackDownload(filename: string): void {
       }),
     }).catch(() => {});
   } catch {
-    /* ignore — tracking must never block */
+    /* ignore - tracking must never block */
   }
 }
 

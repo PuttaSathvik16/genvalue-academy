@@ -12,7 +12,7 @@ export default function InstructorsPage() {
             Instructors
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-pretty text-base text-zinc-600 sm:text-lg dark:text-slate-400">
-            Learn directly from practitioners who ship with AI every week — not slides-first theorists.
+            Learn directly from practitioners who ship with AI every week - not slides-first theorists.
           </p>
         </header>
 

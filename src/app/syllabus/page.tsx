@@ -416,7 +416,7 @@ export default function SyllabusPage() {
           <div className="mt-8 rounded-2xl border border-[#2563EB]/40 bg-gradient-to-br from-white to-zinc-100 p-6 shadow-md dark:from-[#0D1B2A] dark:to-[#0a1628] dark:shadow-[0_0_40px_-12px_rgba(37,99,235,0.35)] sm:p-8">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#60A5FA]">Week 12</p>
             <h3 className="mt-2 text-xl font-bold text-zinc-900 sm:text-2xl dark:text-white">
-              {capstoneWeek?.topic ?? "Capstone — Final Project"}
+              {capstoneWeek?.topic ?? "Capstone - Final Project"}
             </h3>
             <p className="mt-4 text-sm leading-relaxed text-zinc-600 sm:text-base dark:text-slate-400">
               {capstoneWeek?.concepts}
@@ -424,7 +424,7 @@ export default function SyllabusPage() {
             <p className="mt-4 text-sm leading-relaxed text-zinc-700 sm:text-base dark:text-slate-300">
               You&apos;ll scope a real problem, integrate{" "}
               <strong className="font-semibold text-zinc-900 dark:text-white">at least three tools</strong> from the program,
-              ship polished artifacts, document your stack, and present your workflow — building a portfolio
+              ship polished artifacts, document your stack, and present your workflow - building a portfolio
               piece employers can evaluate on merit.
             </p>
             <p className="mt-4 rounded-xl bg-zinc-100 p-4 text-sm text-zinc-700 ring-1 ring-zinc-200 dark:bg-white/5 dark:text-slate-300 dark:ring-white/10">

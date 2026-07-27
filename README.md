@@ -1,6 +1,6 @@
 # GenValue Academy
 
-Marketing and course site for **GenValue Academy** — a practical AI tools program (syllabus, enrollment CTAs, instructor profile, contact form, and SEO-friendly metadata).
+Marketing and course site for **GenValue Academy** - a practical AI tools program (syllabus, enrollment CTAs, instructor profile, contact form, and SEO-friendly metadata).
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FYOUR_ORG%2Fgenvalue-academy&env=NEXT_PUBLIC_SITE_URL,CONTACT_EMAIL&envDescription=See%20.env.example%20in%20the%20repository.)
 
@@ -30,7 +30,7 @@ git clone <your-repo-url>
 cd genvalue-academy
 npm install
 cp .env.example .env.local
-# Edit .env.local — see Environment variables below
+# Edit .env.local - see Environment variables below
 npm run dev
 ```
 

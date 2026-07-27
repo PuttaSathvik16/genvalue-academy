@@ -14,14 +14,14 @@ export interface Post {
 }
 
 const PLACEHOLDER_BODY =
-  "Full article coming soon. We're drafting the detailed sections, examples, and screenshots — check back shortly.\n\nThis placeholder lets you wire up routing, SEO, and layout before the final copy lands.";
+  "Full article coming soon. We're drafting the detailed sections, examples, and screenshots - check back shortly.\n\nThis placeholder lets you wire up routing, SEO, and layout before the final copy lands.";
 
 export const posts: Post[] = [
   {
     slug: "5-ai-tools-every-marketer-needs-2026",
     title: "The 5 AI Tools Every Marketer Needs in 2026",
     excerpt:
-      "Stop guessing which AI tool to use for marketing. Here are the 5 that actually move the needle — and exactly when to use each one.",
+      "Stop guessing which AI tool to use for marketing. Here are the 5 that actually move the needle - and exactly when to use each one.",
     content: PLACEHOLDER_BODY,
     date: "2026-04-15",
     author: "Sathvik Putta",
@@ -34,7 +34,7 @@ export const posts: Post[] = [
   },
   {
     slug: "chatgpt-vs-claude-vs-gemini-2026",
-    title: "ChatGPT vs Claude vs Gemini in 2026 — Which Should You Use?",
+    title: "ChatGPT vs Claude vs Gemini in 2026 - Which Should You Use?",
     excerpt:
       "All three are powerful. None of them is best for everything. Here is the honest, practical breakdown of when to use each.",
     content: PLACEHOLDER_BODY,

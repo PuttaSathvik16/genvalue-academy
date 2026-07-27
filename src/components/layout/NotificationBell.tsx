@@ -19,7 +19,7 @@ const NOTIFICATIONS: readonly GenValueNotification[] = [
   {
     id: "cohort-2026",
     title: "2026 cohort is open",
-    body: "AI Tools Mastery is enrolling now — 12 weeks, 40+ tools, 11 categories, practical deliverables.",
+    body: "AI Tools Mastery is enrolling now - 12 weeks, 40+ tools, 11 categories, practical deliverables.",
     href: "/courses",
     hrefLabel: "View Courses",
   },
@@ -40,7 +40,7 @@ const NOTIFICATIONS: readonly GenValueNotification[] = [
   {
     id: "blog-insights",
     title: "Fresh insights on the blog",
-    body: "Practical posts on choosing assistants, workflows, and automation — updated regularly.",
+    body: "Practical posts on choosing assistants, workflows, and automation - updated regularly.",
     href: "/blog",
     hrefLabel: "Read blog",
   },

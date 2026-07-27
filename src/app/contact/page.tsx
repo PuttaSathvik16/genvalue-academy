@@ -17,13 +17,13 @@ export default function ContactPage() {
             Contact
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-pretty text-base text-zinc-600 sm:text-lg dark:text-slate-400">
-            Questions about the program, cohorts, or team training — send a note and we&apos;ll get back
+            Questions about the program, cohorts, or team training - send a note and we&apos;ll get back
             to you.
           </p>
         </header>
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-14 lg:items-start">
-          {/* Left — contact info */}
+          {/* Left - contact info */}
           <aside className="flex flex-col gap-10">
             <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-lg ring-1 ring-zinc-200 sm:p-8 dark:border-white/10 dark:bg-[#0D1B2A]/80 dark:ring-white/5">
               <h2 className="text-lg font-semibold text-zinc-900 dark:text-white">Contact info</h2>
@@ -116,7 +116,7 @@ export default function ContactPage() {
             </div>
           </aside>
 
-          {/* Right — form */}
+          {/* Right - form */}
           <ContactForm />
         </div>
 

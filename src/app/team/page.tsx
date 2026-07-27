@@ -7,7 +7,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return buildPageMetadata({
     path: "/team",
     title: "Our Team | GenValue Academy",
-    description: "Meet Sathvik Putta — founder and lead instructor of GenValue Academy.",
+    description: "Meet Sathvik Putta - founder and lead instructor of GenValue Academy.",
   });
 }
 
@@ -21,7 +21,7 @@ export default function TeamPage() {
             Meet the Team
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg text-zinc-600 sm:text-xl dark:text-slate-400">
-            Instruction, operations, and the values behind GenValue — practitioners first, always.
+            Instruction, operations, and the values behind GenValue - practitioners first, always.
           </p>
         </div>
       </section>
@@ -40,12 +40,12 @@ export default function TeamPage() {
             <p>
               <strong className="font-semibold text-zinc-900 dark:text-white">GenValue</strong> reflects how{" "}
               <strong className="font-semibold text-zinc-800 dark:text-slate-200">Sathvik Putta</strong> approaches
-              education — curiosity without hype, discipline without ego, and showing up for learners the way
+              education - curiosity without hype, discipline without ego, and showing up for learners the way
               you&apos;d show up for family.
             </p>
             <p>
               The academy is a promise that judgment-first teaching and real opportunity grow from those roots.
-              When you see GenValue, read it as values in practice — not a logo dreamed up overnight.
+              When you see GenValue, read it as values in practice - not a logo dreamed up overnight.
             </p>
           </div>
         </div>

@@ -70,13 +70,13 @@ export const course = {
     { label: "Capstone", value: "1" },
   ],
   learningObjectives: [
-    "Tool Selection — Judge when to use ChatGPT vs Claude vs Gemini vs specialized tools for any deliverable.",
-    "Prompting — Engineer prompts for clarity, consistency, and repeatable professional outputs.",
-    "Automation — Chain AI with Zapier, Make, or n8n to eliminate repetitive workflows.",
-    "Content — Produce writing, images, video, and audio that matches brand voice and production standards.",
-    "Research — Extract insights from papers, reports, and the web using AI search and synthesis tools.",
-    "Coding — Ship and debug features faster with Cursor, Copilot, and AI-assisted development workflows.",
-    "Career — Present a portfolio of AI-powered projects employers recognize as real-world proof.",
+    "Tool Selection - Judge when to use ChatGPT vs Claude vs Gemini vs specialized tools for any deliverable.",
+    "Prompting - Engineer prompts for clarity, consistency, and repeatable professional outputs.",
+    "Automation - Chain AI with Zapier, Make, or n8n to eliminate repetitive workflows.",
+    "Content - Produce writing, images, video, and audio that matches brand voice and production standards.",
+    "Research - Extract insights from papers, reports, and the web using AI search and synthesis tools.",
+    "Coding - Ship and debug features faster with Cursor, Copilot, and AI-assisted development workflows.",
+    "Career - Present a portfolio of AI-powered projects employers recognize as real-world proof.",
   ],
   toolCategories: [
     {
@@ -138,7 +138,7 @@ export const course = {
   syllabus: [
     {
       week: 1,
-      theme: "Month 1 — Foundations",
+      theme: "Month 1 - Foundations",
       topic: "AI Tools Landscape & Selection",
       concepts:
         "How foundation models differ · Tool categories · Safety & accuracy · When general vs specialized tools win · Quick comparison frameworks",
@@ -148,7 +148,7 @@ export const course = {
     },
     {
       week: 2,
-      theme: "Month 1 — Foundations",
+      theme: "Month 1 - Foundations",
       topic: "Prompting Fundamentals",
       concepts:
         "Prompt anatomy · System instructions · Chain-of-thought · Few-shot examples · Iteration loops · Evaluating output quality",
@@ -158,7 +158,7 @@ export const course = {
     },
     {
       week: 3,
-      theme: "Month 1 — Foundations",
+      theme: "Month 1 - Foundations",
       topic: "Research & Synthesis",
       concepts:
         "AI-native search · Citations & hallucination checks · Long-document synthesis · Literature review workflows",
@@ -168,7 +168,7 @@ export const course = {
     },
     {
       week: 4,
-      theme: "Month 1 — Foundations",
+      theme: "Month 1 - Foundations",
       topic: "Writing & Communications",
       concepts:
         "Tone & voice control · Long-form structure · Email & deck copy · Light SEO alignment · Editing passes",
@@ -178,7 +178,7 @@ export const course = {
     },
     {
       week: 5,
-      theme: "Month 2 — Creative & Technical",
+      theme: "Month 2 - Creative & Technical",
       topic: "Image Generation & Visual Systems",
       concepts:
         "Prompting for composition & style · Brand-safe imagery · Inpainting & variations · Export specs",
@@ -188,7 +188,7 @@ export const course = {
     },
     {
       week: 6,
-      theme: "Month 2 — Creative & Technical",
+      theme: "Month 2 - Creative & Technical",
       topic: "Video & Audio Production",
       concepts:
         "Text-to-video pipelines · AI avatars · Voice synthesis · Editing & captions · Multilingual delivery",
@@ -198,7 +198,7 @@ export const course = {
     },
     {
       week: 7,
-      theme: "Month 2 — Creative & Technical",
+      theme: "Month 2 - Creative & Technical",
       topic: "Coding with AI",
       concepts:
         "Inline completion vs chat · Prompt-to-app flows · Tests & refactors · Agent-assisted debugging · Ship discipline",
@@ -208,7 +208,7 @@ export const course = {
     },
     {
       week: 8,
-      theme: "Month 2 — Creative & Technical",
+      theme: "Month 2 - Creative & Technical",
       topic: "Productivity Systems",
       concepts:
         "Notes → actions · Meeting intelligence · Calendar triage · Slide & memo generation · Personal operating system",
@@ -218,7 +218,7 @@ export const course = {
     },
     {
       week: 9,
-      theme: "Month 3 — Advanced & Applied",
+      theme: "Month 3 - Advanced & Applied",
       topic: "Data Analysis with AI",
       concepts:
         "Conversational analytics · Chart intent · BI copilots · Storytelling with numbers · Sanity checks",
@@ -228,7 +228,7 @@ export const course = {
     },
     {
       week: 10,
-      theme: "Month 3 — Advanced & Applied",
+      theme: "Month 3 - Advanced & Applied",
       topic: "Agents & Automation",
       concepts:
         "Trigger/action design · Multi-step workflows · Error handling · Human-in-the-loop approvals · Cost awareness",
@@ -238,21 +238,21 @@ export const course = {
     },
     {
       week: 11,
-      theme: "Month 3 — Advanced & Applied",
+      theme: "Month 3 - Advanced & Applied",
       topic: "Integrated Workflows & Ethics",
       concepts:
         "Cross-tool orchestration · Role-specific stacks · Privacy & IP · Bias & disclosure · Speed vs quality trade-offs",
-      toolsUsed: ["Mixed stack from weeks 1–10"],
+      toolsUsed: ["Mixed stack from weeks 1-10"],
       assignment: "Reverse-engineer a published workflow and propose a safer, faster alternative.",
       useCase: "Teams debate governance for customer-facing AI outputs.",
     },
     {
       week: 12,
-      theme: "Month 3 — Advanced & Applied",
-      topic: "Capstone — Final Project",
+      theme: "Month 3 - Advanced & Applied",
+      topic: "Capstone - Final Project",
       concepts:
         "Scoping · Multi-tool integration · Documentation · Presentation · Portfolio packaging · Peer feedback",
-      toolsUsed: ["Student choice — minimum three tools from the course"],
+      toolsUsed: ["Student choice - minimum three tools from the course"],
       assignment:
         "Deliver a capstone that solves a real problem: documented stack, artifacts, and live demo.",
       useCase: "Learners present portfolio-grade work to peers and instructor review.",

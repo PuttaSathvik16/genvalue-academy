@@ -17,7 +17,7 @@ function getServerSnapshot(): boolean {
 }
 
 /**
- * Matches OS-level reduced motion preference (for non–Framer Motion UI).
+ * Matches OS-level reduced motion preference (for non-Framer Motion UI).
  * Framer Motion trees should also use {@link MotionPreferences} with `reducedMotion="user"`.
  */
 export function usePrefersReducedMotion(): boolean {

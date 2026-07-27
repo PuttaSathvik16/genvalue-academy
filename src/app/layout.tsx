@@ -63,7 +63,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "GenValue Academy — AI Tools Mastery Program",
+        alt: "GenValue Academy - AI Tools Mastery Program",
       },
     ],
   },

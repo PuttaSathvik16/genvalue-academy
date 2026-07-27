@@ -32,19 +32,19 @@ export const founders: Founder[] = [
     bio: [
       "Sathvik Putta is the founder of GenValue Academy and lead instructor of the AI Tools Mastery program. With a deep academic foundation in Computer Science and Artificial Intelligence from the United States, he bridges the gap between cutting-edge AI research and practical real-world application.",
       "His teaching philosophy is simple: AI fluency is a skill, not a talent. Anyone who learns the right frameworks can master any AI tool in their domain.",
-      "Sathvik designed the 12-week AI Tools Mastery curriculum from the ground up — built on the tools he uses professionally every day.",
+      "Sathvik designed the 12-week AI Tools Mastery curriculum from the ground up - built on the tools he uses professionally every day.",
     ],
     degrees: [
       {
         level: "Master of Science",
         field: "Data Science / Artificial Intelligence",
-        institution: "University — USA",
+        institution: "University - USA",
         country: "United States",
       },
       {
         level: "Bachelor of Engineering",
         field: "Computer Science & Information Technology",
-        institution: "University — India",
+        institution: "University - India",
         country: "India",
       },
     ],

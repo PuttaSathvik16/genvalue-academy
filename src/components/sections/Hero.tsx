@@ -95,7 +95,7 @@ export function Hero() {
           variants={itemVariants}
           className="mt-6 max-w-2xl text-pretty text-sm leading-relaxed text-zinc-600 sm:mt-8 sm:text-base md:text-lg dark:text-slate-400"
         >
-          12-week practical program covering 40+ AI tools across 11 categories — for
+          12-week practical program covering 40+ AI tools across 11 categories - for
           real-world professional results
         </motion.p>
 

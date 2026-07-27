@@ -8,7 +8,7 @@ export async function generateMetadata(): Promise<Metadata> {
     path: "/courses",
     title: "Courses | GenValue Academy",
     description:
-      "AI Tools Mastery — a 12-week program covering 40+ AI tools across 11 categories. Syllabus, outcomes, and enrollment.",
+      "AI Tools Mastery - a 12-week program covering 40+ AI tools across 11 categories. Syllabus, outcomes, and enrollment.",
     ogTitle: "Courses | GenValue Academy",
   });
 }
@@ -25,7 +25,7 @@ export default function CoursesPage() {
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-zinc-600 dark:text-slate-400">
           Our flagship offering is{" "}
-          <strong className="font-semibold text-zinc-900 dark:text-white">AI Tools Mastery</strong> — a
+          <strong className="font-semibold text-zinc-900 dark:text-white">AI Tools Mastery</strong> - a
           practical 12-week track built for professionals who need judgment, not just feature lists.
         </p>
         <div className="mx-auto mt-10 w-full max-w-4xl overflow-hidden rounded-2xl border border-zinc-200 bg-black shadow-xl dark:border-white/10">

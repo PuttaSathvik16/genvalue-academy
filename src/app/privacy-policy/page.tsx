@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="text-xl font-semibold text-zinc-900 dark:text-white">Cookies, cache &amp; local storage</h2>
           <p>
             Like any website, your browser may keep <strong>temporary cache files</strong> (e.g. images, scripts) to load
-            pages faster. We do not use that cache to identify you — it is normal browser behavior, not a paid tracking
+            pages faster. We do not use that cache to identify you - it is normal browser behavior, not a paid tracking
             product.
           </p>
           <p>

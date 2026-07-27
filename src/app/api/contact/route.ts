@@ -11,12 +11,12 @@ function buildTeamEmailHtml(data: {
   courseInterest: string;
   message: string;
 }): string {
-  const phoneDisplay = data.phone.trim() || "—";
+  const phoneDisplay = data.phone.trim() || "-";
   return `
 <!DOCTYPE html>
 <html>
 <body style="font-family:system-ui,sans-serif;line-height:1.5;color:#111;">
-  <h2 style="margin-top:0;">New contact form — GenValue Academy</h2>
+  <h2 style="margin-top:0;">New contact form - GenValue Academy</h2>
   <table style="border-collapse:collapse;max-width:560px;">
     <tr><td style="padding:6px 12px 6px 0;font-weight:600;">Name</td><td style="padding:6px 0;">${escapeHtml(data.fullName)}</td></tr>
     <tr><td style="padding:6px 12px 6px 0;font-weight:600;">Email</td><td style="padding:6px 0;"><a href="mailto:${escapeHtml(data.email)}">${escapeHtml(data.email)}</a></td></tr>
@@ -71,10 +71,10 @@ export async function POST(request: Request) {
       subject: `Contact form: ${data.fullName}`,
       htmlContent: buildTeamEmailHtml(data),
       textContent: [
-        "New contact form — GenValue Academy",
+        "New contact form - GenValue Academy",
         `Name: ${data.fullName}`,
         `Email: ${data.email}`,
-        `Phone: ${data.phone.trim() || "—"}`,
+        `Phone: ${data.phone.trim() || "-"}`,
         `Course interest: ${data.courseInterest}`,
         "",
         "Message:",
@@ -115,7 +115,7 @@ export async function POST(request: Request) {
 
     const confirmResult = await sendBrevoTransactionalEmail({
       to: [{ email: data.email, name: data.fullName }],
-      subject: "We received your message — GenValue Academy",
+      subject: "We received your message - GenValue Academy",
       htmlContent: buildConfirmationHtml(data.fullName),
       textContent: [
         `Hi ${data.fullName.trim().split(/\s+/)[0] ?? "there"},`,

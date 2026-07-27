@@ -17,15 +17,15 @@ import {
 import { useEffect, useRef, useState } from "react";
 
 const MISSION_PARAGRAPHS = [
-  "Most courses chase every new model drop. We step back and ask which tool fits the task, the audience, and the risk profile — then move fast with clarity.",
+  "Most courses chase every new model drop. We step back and ask which tool fits the task, the audience, and the risk profile - then move fast with clarity.",
   "GenValue is built for working professionals: weekly builds, real assignments, and feedback that sounds like a colleague, not a brochure.",
-  "Our north star is simple: when the landscape shifts again, you should already know how to choose — not how to panic-scroll release notes.",
+  "Our north star is simple: when the landscape shifts again, you should already know how to choose - not how to panic-scroll release notes.",
 ] as const;
 
 const APPROACH_STEPS = [
   {
     title: "Learn the Landscape",
-    body: "Map categories, trade-offs, and when general assistants beat niche tools — before you touch a single login.",
+    body: "Map categories, trade-offs, and when general assistants beat niche tools - before you touch a single login.",
     Icon: FaCompass,
   },
   {
@@ -35,7 +35,7 @@ const APPROACH_STEPS = [
   },
   {
     title: "Build Real Projects",
-    body: "Ship hands-on work every week and finish with a capstone employers can inspect — not a slideshow of hype.",
+    body: "Ship hands-on work every week and finish with a capstone employers can inspect - not a slideshow of hype.",
     Icon: FaRocket,
   },
 ] as const;
@@ -51,19 +51,19 @@ const VALUES = [
   {
     title: "Practical",
     description:
-      "Every lesson ties to a deliverable you could hand to a manager or client — templates, rubrics, and examples included.",
+      "Every lesson ties to a deliverable you could hand to a manager or client - templates, rubrics, and examples included.",
     Icon: FaHammer,
   },
   {
     title: "Honest",
     description:
-      "We name limits, failure modes, and when not to use AI — especially for high-stakes or regulated work.",
+      "We name limits, failure modes, and when not to use AI - especially for high-stakes or regulated work.",
     Icon: FaShieldHalved,
   },
   {
     title: "Outcomes-Driven",
     description:
-      "Progress is measured in shipped work and sound tool choices — not vanity quiz scores or completion badges alone.",
+      "Progress is measured in shipped work and sound tool choices - not vanity quiz scores or completion badges alone.",
     Icon: FaChartLine,
   },
   {
@@ -226,7 +226,7 @@ export default function AboutPage() {
             </p>
             <p>
               Sathvik founded GenValue Academy and leads instruction today. The name is a commitment that effort
-              should compound into real opportunity — not a logo dreamed up overnight.
+              should compound into real opportunity - not a logo dreamed up overnight.
             </p>
             <p>
               When you see <span className="text-[#F59E0B]">GenValue Academy</span>, read it as a promise:
@@ -243,7 +243,7 @@ export default function AboutPage() {
             Our Approach
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-zinc-600 dark:text-slate-400">
-            A single thread from orientation to capstone — framework first, tools second, proof last.
+            A single thread from orientation to capstone - framework first, tools second, proof last.
           </p>
 
           <div className="mt-14 flex flex-col items-stretch gap-4 md:flex-row md:items-stretch md:justify-center md:gap-2 lg:gap-4">
@@ -290,7 +290,7 @@ export default function AboutPage() {
             By the Numbers
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-zinc-600 dark:text-slate-400">
-            Proof lives in the syllabus — not in adjectives.
+            Proof lives in the syllabus - not in adjectives.
           </p>
           <div className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
             {NUMBER_STATS.map((s) => (

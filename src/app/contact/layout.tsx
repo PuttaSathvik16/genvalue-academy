@@ -6,7 +6,7 @@ export async function generateMetadata(): Promise<Metadata> {
     path: "/contact",
     title: "Contact | GenValue Academy",
     description:
-      "Reach GenValue Academy — questions about AI Tools Mastery, corporate training, or partnerships. We reply within 24 hours.",
+      "Reach GenValue Academy - questions about AI Tools Mastery, corporate training, or partnerships. We reply within 24 hours.",
     ogTitle: "Contact | GenValue Academy",
   });
 }

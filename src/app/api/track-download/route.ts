@@ -12,7 +12,7 @@ export async function POST(request: Request) {
       if (typeof b.page === "string") page = b.page;
     }
   } catch {
-    // Malformed JSON — still return success; log what we can
+    // Malformed JSON - still return success; log what we can
   }
 
   const userAgent = request.headers.get("user-agent") ?? "";

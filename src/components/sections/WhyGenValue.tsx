@@ -66,11 +66,11 @@ export function WhyGenValue() {
               id="why-genvalue-heading"
               className="mt-3 text-balance text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl lg:text-[2.5rem] lg:leading-tight dark:text-white"
             >
-              Not just what to use — but when and why
+              Not just what to use - but when and why
             </h2>
             <p className="mt-5 text-base leading-relaxed text-zinc-600 sm:text-lg dark:text-slate-400">
               Most AI courses teach tools. We teach judgment. You leave knowing how to pick
-              the right AI for any professional task — in seconds.
+              the right AI for any professional task - in seconds.
             </p>
           </div>
 

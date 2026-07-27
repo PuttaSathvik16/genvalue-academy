@@ -110,7 +110,7 @@ export function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          aria-label="GenValue Academy — Home"
+          aria-label="GenValue Academy - Home"
           className="flex min-w-0 items-center gap-3 rounded-lg py-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2563EB]"
         >
           <SiteLogoMark />

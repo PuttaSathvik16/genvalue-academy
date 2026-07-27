@@ -219,21 +219,18 @@ export default function AboutPage() {
           </h2>
           <div className="mt-8 space-y-5 text-base leading-relaxed text-zinc-600 sm:text-lg dark:text-slate-400">
             <p>
-              <strong className="font-semibold text-zinc-900 dark:text-white">GenValue</strong> carries two names that
-              shaped how we think about education:{" "}
-              <strong className="font-semibold text-zinc-800 dark:text-slate-200">Sathvik</strong> and{" "}
-              <strong className="font-semibold text-zinc-800 dark:text-slate-200">Sujith</strong>. Together they stand for
-              curiosity without hype, discipline without ego, and showing up for learners the way you&apos;d
-              show up for family.
+              <strong className="font-semibold text-zinc-900 dark:text-white">GenValue</strong> is rooted in how{" "}
+              <strong className="font-semibold text-zinc-800 dark:text-slate-200">Sathvik Putta</strong> thinks about
+              education: curiosity without hype, discipline without ego, and showing up for learners the way
+              you&apos;d show up for family.
             </p>
             <p>
-              Sathvik leads instruction today — but the academy&apos;s name is a reminder that GenValue
-              was never meant to be a solo brand. It&apos;s a commitment inherited from people who
-              believed effort should compound into real opportunity.
+              Sathvik founded GenValue Academy and leads instruction today. The name is a commitment that effort
+              should compound into real opportunity — not a logo dreamed up overnight.
             </p>
             <p>
               When you see <span className="text-[#F59E0B]">GenValue Academy</span>, read it as a promise:
-              judgment-first teaching, grounded in the values those names represent.
+              judgment-first teaching, grounded in those values.
             </p>
           </div>
         </div>

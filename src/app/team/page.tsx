@@ -7,7 +7,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return buildPageMetadata({
     path: "/team",
     title: "Our Team | GenValue Academy",
-    description: "Meet Sathvik and Sujith — the founders of GenValue Academy.",
+    description: "Meet Sathvik Putta — founder and lead instructor of GenValue Academy.",
   });
 }
 
@@ -38,16 +38,14 @@ export default function TeamPage() {
           </h2>
           <div className="mt-6 space-y-4 text-base leading-relaxed text-zinc-600 sm:text-lg dark:text-slate-400">
             <p>
-              <strong className="font-semibold text-zinc-900 dark:text-white">GenValue</strong> is woven from two names that
-              shaped how we think about education —{" "}
-              <strong className="font-semibold text-zinc-800 dark:text-slate-200">Sathvik</strong> and{" "}
-              <strong className="font-semibold text-zinc-800 dark:text-slate-200">Sujith</strong>. They stand for curiosity
-              without hype, discipline without ego, and showing up for learners the way you&apos;d show up for family.
+              <strong className="font-semibold text-zinc-900 dark:text-white">GenValue</strong> reflects how{" "}
+              <strong className="font-semibold text-zinc-800 dark:text-slate-200">Sathvik Putta</strong> approaches
+              education — curiosity without hype, discipline without ego, and showing up for learners the way
+              you&apos;d show up for family.
             </p>
             <p>
-              The academy isn&apos;t named after a solo brand — it&apos;s a promise that judgment-first teaching and real
-              opportunity grow from those roots. When you see GenValue, read it as values passed down, not a logo dreamed up
-              overnight.
+              The academy is a promise that judgment-first teaching and real opportunity grow from those roots.
+              When you see GenValue, read it as values in practice — not a logo dreamed up overnight.
             </p>
           </div>
         </div>

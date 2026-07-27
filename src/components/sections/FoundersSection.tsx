@@ -212,7 +212,13 @@ export function FoundersSection({ id }: FoundersSectionProps = {}) {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10">
+        <div
+          className={
+            founders.length > 1
+              ? "grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10"
+              : "mx-auto grid max-w-xl grid-cols-1 gap-8"
+          }
+        >
           {founders.map((founder, index) => (
             <FounderCard key={founder.id} founder={founder} index={index} />
           ))}

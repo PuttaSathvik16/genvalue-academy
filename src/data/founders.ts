@@ -60,33 +60,4 @@ export const founders: Founder[] = [
     github: "https://github.com/PuttaSathvik16",
     email: "genvalue.academy@gmail.com",
   },
-  {
-    id: "sujith-putta",
-    name: "Sujith Putta",
-    role: "Co-Founder",
-    title: "Operations & Strategy",
-    photo: "/images/founders/sujith-putta.png",
-    bio: [
-      "Sujith Putta is co-founder of GenValue Academy, responsible for program strategy, operations, and growth. His engineering background gives him a first-principles approach to building systems — whether in code or in business.",
-      "Sujith brings the operational discipline that turns a great course idea into a scalable educational product.",
-    ],
-    degrees: [
-      {
-        level: "Bachelor of Technology",
-        field: "Computer Science & Information Technology",
-        institution: "University — India",
-        country: "India",
-      },
-    ],
-    expertise: [
-      "Program Strategy",
-      "Operations",
-      "Growth & Partnerships",
-      "Tech Infrastructure",
-      "AI Tools",
-    ],
-    linkedin: "https://www.linkedin.com/in/sujith-putta-13257a322/",
-    github: "https://github.com/sujithputta02",
-    email: "genvalue.academy@gmail.com",
-  },
 ];
